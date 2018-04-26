@@ -44,8 +44,7 @@
                 "get_indent": 1,
                 "is_section": false,
                 "text": "First"
-            },{
-                "showdivider": true,
+            },,
                 "action": "#",
                 "isactive": false,
                 "get_indent": 0,
@@ -56,11 +55,19 @@
     }
 }}
 <nav class="list-group">
+ 
 {{# flatnavigation }}
     {{#showdivider}}
+
 </nav>
-<nav class="list-group m-t-1">
+
+
+<nav class="umer">
+ 
+
+</nav>
     {{/showdivider}}
+<nav class="list-group m-t-1">
     {{#action}}
     <a class="list-group-item list-group-item-action {{#isactive}}font-weight-bold{{/isactive}}" href="{{{action}}}" data-key="{{key}}" data-isexpandable="{{isexpandable}}" data-indent="{{get_indent}}" data-showdivider="{{showdivider}}" data-type="{{type}}" data-nodetype="{{nodetype}}" data-collapse="{{collapse}}" data-forceopen="{{forceopen}}" data-isactive="{{isactive}}" data-hidden="{{hidden}}" data-preceedwithhr="{{preceedwithhr}}" {{#parent.key}}data-parent-key="{{.}}"{{/parent.key}}>
         <div class="m-l-{{get_indent}}">
@@ -71,15 +78,21 @@
                     </span>
                     <span class="media-body">{{{text}}}</span>
                 </div>
+         
             {{/is_section}}
             {{^is_section}}
                 {{{text}}}
             {{/is_section}}
+            
         </div>
     </a>
+       
     {{/action}}
+ 
     {{^action}}
+    
     <div class="list-group-item" data-key="{{key}}" data-isexpandable="{{isexpandable}}" data-indent="{{get_indent}}" data-showdivider="{{showdivider}}" data-type="{{type}}" data-nodetype="{{nodetype}}" data-collapse="{{collapse}}" data-forceopen="{{forceopen}}" data-isactive="{{isactive}}" data-hidden="{{hidden}}" data-preceedwithhr="{{preceedwithhr}}" {{#parent.key}}data-parent-key="{{.}}"{{/parent.key}}>
+       
         <div class="m-l-{{get_indent}}">
             {{#is_section}}
                 {{#pix}}i/folder{{/pix}}
@@ -88,5 +101,8 @@
         </div>
     </div>
     {{/action}}
+      
 {{/ flatnavigation }}
+
+
 </nav>
